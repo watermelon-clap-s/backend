@@ -1,7 +1,7 @@
 import http from 'k6/http';
 import { sleep, check } from 'k6';
 const port = 8080
-const server = "3.36.51.22"
+const server = "//3.36.51.22"
 
 export const options = {
     vus: 1000,  //천명이
