@@ -14,7 +14,7 @@ export const options = {
 };
 
 export default function () {
-    let response = http.get(server+':'+port);
+    let response = http.get(server+':'+port+"/expectations");
 
     // 응답 확인 (필요에 따라 수정)
     check(response, {
