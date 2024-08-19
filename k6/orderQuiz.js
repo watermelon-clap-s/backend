@@ -2,12 +2,12 @@ import http from 'k6/http';
 import { sleep, check } from 'k6';
 const port = 8080
 const server = "3.36.51.22"
-
+const duration = '10s'
 export const options = {
     vus: 1000, // 가상 사용자 수
-    duration: '10s', // 테스트 지속 시간
+ // 테스트 지속 시간
     throattle:{
-        rate: 1000/options.duration,
+        rate: 1000/duration,
         type: "fpm",
     }
 };
