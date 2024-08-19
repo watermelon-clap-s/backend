@@ -7,7 +7,7 @@ export const options = {
     vus: 1000, // 가상 사용자 수
     duration: '10s', // 테스트 지속 시간
     throattle:{
-        rate: 1000/duration,
+        rate: 1000/options.duration,
         type: "fpm",
     }
 };
