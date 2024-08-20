@@ -4,7 +4,7 @@ const port = 8080
 const server = "http://3.36.51.22"
 
 export const options = {
-    vus: 10000,  //천명이
+    vus: 100,  //천명이
     duration:'2s',//2초동안
 
 };
