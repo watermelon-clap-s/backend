@@ -11,7 +11,7 @@
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="(이벤트 시작 전) 메인 페이지 -&gt; 선착순 퀴즈 페이지 진입 시나리오 A">
         <stringProp name="TestPlan.comments"> 총 10초 전부터  1000명만 진입</stringProp>
-        <intProp name="ThreadGroup.num_threads">1000</intProp>
+        <intProp name="ThreadGroup.num_threads">100</intProp>
         <intProp name="ThreadGroup.ramp_time">10</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -21,7 +21,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="메인 페이지  기대평 가져오기">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="메인 페이지  기대평 가져오기" enabled="true">
           <stringProp name="HTTPSampler.domain">3.36.51.22</stringProp>
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -42,7 +42,7 @@
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="선착순 이벤트들 조회 (처음 진입)">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="선착순 이벤트들 조회 (처음 진입)" enabled="true">
           <stringProp name="HTTPSampler.domain">3.36.51.22</stringProp>
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -57,10 +57,10 @@
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="(이벤트 시작 직후)선착순 새로 고침 시나리오  A" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="(이벤트 시작 직후)선착순 새로 고침 시나리오  A">
         <stringProp name="TestPlan.comments">10초 후 시작
 1초 동안 5000명  2번 = 총 1만명이 새로 고침</stringProp>
-        <intProp name="ThreadGroup.num_threads">5000</intProp>
+        <intProp name="ThreadGroup.num_threads">1000</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <longProp name="ThreadGroup.duration">10</longProp>
         <longProp name="ThreadGroup.delay">10</longProp>
@@ -162,7 +162,7 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="(새로 고침 후) 선착순 퀴즈 제출 시나리오  A" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="(새로 고침 후) 선착순 퀴즈 제출 시나리오  A">
         <stringProp name="TestPlan.comments">스트레스 테스트가 시작되 10초 후 시작 20초 동안 매 초마다 1000개</stringProp>
         <intProp name="ThreadGroup.num_threads">100</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
