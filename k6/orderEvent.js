@@ -17,6 +17,5 @@ export default function () {
     check(response, {
         'status was 200': (r) => r.status === 200,
     });
-    
     // sleep(1); // 각 가상 사용자가 1초 대기
 }
