@@ -57,7 +57,7 @@
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="(이벤트 시작 직후)선착순 새로 고침 시나리오  A">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="(이벤트 시작 직후)선착순 새로 고침 시나리오  A" enabled="true">
         <stringProp name="TestPlan.comments">10초 후 시작
 1초 동안 5000명  2번 = 총 1만명이 새로 고침</stringProp>
         <intProp name="ThreadGroup.num_threads">500</intProp>
@@ -73,7 +73,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="선착순 이벤트들 조회 (새로 고침)">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="선착순 이벤트들 조회 (새로 고침)" enabled="true">
           <stringProp name="HTTPSampler.domain">3.36.51.22</stringProp>
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
@@ -87,7 +87,7 @@
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -164,7 +164,7 @@
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="(새로 고침 후) 선착순 퀴즈 제출 시나리오  A">
         <stringProp name="TestPlan.comments">스트레스 테스트가 시작되 10초 후 시작 20초 동안 매 초마다 1000개</stringProp>
-        <intProp name="ThreadGroup.num_threads">100</intProp>
+        <intProp name="ThreadGroup.num_threads">500</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <longProp name="ThreadGroup.duration">20</longProp>
         <longProp name="ThreadGroup.delay">10</longProp>
