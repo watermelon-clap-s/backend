@@ -4,7 +4,7 @@ const port = 8080
 const server = "http://3.36.51.22"
 
 export const options = {
-    vus: 5000,  //천명이
+    vus: 10000,  //천명이
     duration:'2s',//2초동안
     throattle:{
         rate: 1000, //1000ms마다
